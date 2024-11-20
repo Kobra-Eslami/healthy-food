@@ -1,0 +1,36 @@
+//reset
+$direction-rtl: rtl;
+
+@font-face {
+  //font-family: $font-family;
+  //src: url("#{$font-path}/Vazir-Medium.eot") format('eot'),
+  //url("#{$font-path}/Vazir-Medium.woff") format('woff'),
+  //url("#{$font-path}/Vazir-Medium.woff2") format('woff2');
+  //font-weight: $font-weight;
+  font-style: $font-style;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul, ol {
+  list-style: none;
+}
+
+.img-fluid {
+  display: block;
+  width: 100%;
+  height: auto;
+}

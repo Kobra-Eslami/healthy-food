@@ -1,0 +1,32 @@
+/* -------------------------- */
+/* font variables */
+/* -------------------------- */
+@font-face {
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Intel", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul, ol {
+  list-style: none;
+}
+
+.img-fluid {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
