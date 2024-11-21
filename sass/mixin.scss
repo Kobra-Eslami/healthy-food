@@ -1,0 +1,36 @@
+//@mixin margin-right-sm($margin-right) {
+//  margin-right: $margin-right !important;
+//}
+
+//@mixin margin-top($margin-top) {
+//  margin-top: $margin-top !important;
+//}
+//@mixin margin-bottom($margin-bottom) {
+//  margin-bottom: $margin-bottom !important;
+//}
+//@mixin font-size($font-size){
+//  font-size: $font-size;
+//}
+//@mixin font-weight($font-weight){
+//  font-weight: $font-weight;
+//}
+//@mixin color($color){
+//  color :$color;
+//}
+//@mixin background-color($background-color){
+//  background-color :$background-color;
+//}
+@mixin flex-position($justify-content,$align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin heading-primary() {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: $head-color;
+  letter-spacing: -0.5px;
+  margin-bottom: 3.2rem;
+}

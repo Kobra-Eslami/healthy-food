@@ -1,0 +1,48 @@
+.header {
+  @include flex-position(space-between, center);
+  background-color: $header-background-color;
+  height: 9.6rem;
+  padding: 0 4.8rem;
+
+  .logo {
+    height: 8.2rem;
+  }
+
+  .main-nav-list {
+    display: flex;
+    gap: 3.2rem;
+    align-items: center;
+
+    li {
+      .main-nav-link {
+        &:link, &:visited {
+          display: inline-block;
+          color: $head-color;
+          font-weight: 500;
+          font-size: 1.8rem;
+          transition: all 0.3s;
+
+          &:hover, &:active {
+            color: $secondary-color;
+          }
+        }
+
+      }
+
+      &:last-child{
+        .main-nav-link {
+          display: inline-block;
+          padding: 1.2rem 2.4rem;
+          border-radius: 9px;
+          color: $white-color !important;
+          background-color: $primary-color;
+          transition: background-color 0.3s;
+          &:hover, &:active {
+            background-color: $secondary-color;
+          }
+        }
+      }
+    }
+
+  }
+}

@@ -1,12 +1,49 @@
-//reset
-$direction-rtl: rtl;
+/*
+--- 01 Typography System
+- Spacing System (px):
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 /96 / 128
+
+- Font Weights:
+Default : 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line Heights:
+Default : 1
+Small: 1.05
+Paragraph-default: 1.6
+
+- Font size System:
+10 / 12 / 14 /  16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 /86 / 98
+
+
+--- 02 Colors
+- Primary : #e67e22
+- Tints: #fdf2e9
+- Shades: #cf711f
+- Accents:
+- Greys:
+#555
+#333
+
+
+--- 03 Shadows
+--- 04 Border-Radius
+- Default: 9px
+
+--- 05 WhiteSpace
+- Spacing System (px) :
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 /96 / 128
+ */
+
 
 @font-face {
-  //font-family: $font-family;
-  //src: url("#{$font-path}/Vazir-Medium.eot") format('eot'),
-  //url("#{$font-path}/Vazir-Medium.woff") format('woff'),
-  //url("#{$font-path}/Vazir-Medium.woff2") format('woff2');
-  //font-weight: $font-weight;
+  font-family: $font-family;
+  //src: url("#{$font-path}/Rubik-Regular.ttf") format('truetype'),
+  //url("#{$font-path}/Rubik-Medium.ttf") format('truetype'),
+  //url("#{$font-path}/Rubik-Bold.ttf") format('truetype');
+  font-weight: $font-weight;
   font-style: $font-style;
 }
 
@@ -16,21 +53,29 @@ $direction-rtl: rtl;
   box-sizing: border-box;
 }
 
-body {
-  font-family: $font-family;
-  overflow-x: hidden;
+html {
+  font-size: $font-size;
+  body {
+    font-family: $font-family, sans-serif;
+    line-height: $line-height;
+    font-weight: $font-weight;
+    color: $main-color;
+
+    a {
+      text-decoration: none;
+    }
+
+    ol, ul, ol {
+      list-style: none;
+    }
+
+  }
+
+
 }
 
-a {
-  text-decoration: none;
-}
-
-ol, ul, ol {
-  list-style: none;
-}
-
-.img-fluid {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+//.img-fluid {
+//  display: block;
+//  width: 100%;
+//  height: auto;
+//}

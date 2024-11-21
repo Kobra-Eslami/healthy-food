@@ -4,12 +4,18 @@
 /* -------------------------- */
 
 
-//$font-path: '../fonts';
-$font-family: 'Intel',sans-serif;
-//$font-weight: 700;
+$font-path: '../../assets/fonts';
+$font-family: 'Rubik';
+$font-weight: 400;
 $font-style: normal;
-//$default-font-size: 16px;
-//$nav-link-color: rgb(46, 46, 46);
-//$nav-link-hover-color: rgb(54, 114, 228);
-//$social-color-icons: #545858;
-//$social-color-icons-hover: #3f3d3d;
+$line-height : 1;
+$main-color : #555;
+$head-color : #333;
+$primary-color:#e67e22;
+$secondary-color:#cf711f;
+$white-color:#fff;
+$header-background-color :#fdf2e9;
+//font-size: 10px
+// percentage of user's browser font-size setting
+// 16 * 0.625 = 10
+$font-size : 62.5%
