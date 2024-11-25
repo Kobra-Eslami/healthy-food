@@ -29,13 +29,16 @@
   content: '';
   display: block;
   width: $width;
-  //height: 60%;
-  border-radius: 50%;
+  //height: 60%; not working so :
   padding-bottom: $padding-bottom;
+
+  // technique of centering element start
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  // technique of centering element end
+  border-radius: 50%;
   background-color: $background-color;
   z-index: $z-index;
 }
