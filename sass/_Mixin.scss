@@ -1,0 +1,41 @@
+@mixin flex-position($justify-content,$align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin heading-primary() {
+  color: $head-color;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+@mixin main-grid-position($justify-content,$align-items) {
+  display: grid;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin grid-position($row-gap,$column-gap){
+  display: grid;
+  row-gap: $row-gap; //9.6rem
+  column-gap: $column-gap; //6.4rem
+}
+
+@mixin grid-cols($repeat-count,$tracks){
+  grid-template-columns: repeat($repeat-count,$tracks);
+}
+
+@mixin create-circle($width,$background-color,$padding-bottom,$z-index){
+  content: '';
+  display: block;
+  width: $width;
+  //height: 60%;
+  border-radius: 50%;
+  padding-bottom: $padding-bottom;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $background-color;
+  z-index: $z-index;
+}

@@ -15,7 +15,12 @@ Bold: 700
 - Line Heights:
 Default : 1
 Small: 1.05
+Medium:1.2
 Paragraph-default: 1.6
+
+-Letter Spacing:
+0.5px
+0.75px
 
 - Font size System:
 10 / 12 / 14 /  16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 /86 / 98
@@ -23,7 +28,9 @@ Paragraph-default: 1.6
 
 --- 02 Colors
 - Primary : #e67e22
-- Tints: #fdf2e9
+- Tints:
+ #fdf2e9
+ #fae5d3
 - Shades: #cf711f
 - Accents:
 - Greys:
@@ -65,40 +72,42 @@ html body a {
 html body ol, html body ul, html body ol {
   list-style: none;
 }
+html body .container, html body .section-hero .hero, .section-hero html body .hero {
+  margin: 0 auto;
+  max-width: 130rem;
+  padding: 0 3.2rem;
+}
+html body .btn:link, html body .section-hero .hero .hero-text-box .btn--outline:link, .section-hero .hero .hero-text-box html body .btn--outline:link, html body .section-hero .hero .hero-text-box .btn--full:link, .section-hero .hero .hero-text-box html body .btn--full:link, html body .btn:visited, html body .section-hero .hero .hero-text-box .btn--outline:visited, .section-hero .hero .hero-text-box html body .btn--outline:visited, html body .section-hero .hero .hero-text-box .btn--full:visited, .section-hero .hero .hero-text-box html body .btn--full:visited {
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: all 0.3s linear;
+}
 
 .section-hero {
   background-color: #fdf2e9;
   padding: 4.8rem 0 9.6rem 0;
 }
 .section-hero .hero {
-  max-width: 130rem;
-  margin: 0 auto;
-  padding: 0 3.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 9.6rem;
 }
 .section-hero .hero .hero-text-box .heading-primary {
-  font-size: 5.2rem;
-  font-weight: 700;
-  line-height: 1.05;
   color: #333;
+  font-weight: 700;
   letter-spacing: -0.5px;
+  font-size: 5.2rem;
+  line-height: 1.05;
   margin-bottom: 3.2rem;
 }
 .section-hero .hero .hero-text-box .hero-description {
   font-size: 2rem;
   line-height: 1.6;
   margin-bottom: 4.8rem;
-}
-.section-hero .hero .hero-text-box .btn:link, .section-hero .hero .hero-text-box .btn--outline:link, .section-hero .hero .hero-text-box .btn--full:link, .section-hero .hero .hero-text-box .btn:visited, .section-hero .hero .hero-text-box .btn--outline:visited, .section-hero .hero .hero-text-box .btn--full:visited {
-  display: inline-block;
-  padding: 1.6rem 3.2rem;
-  border-radius: 9px;
-  font-size: 2rem;
-  font-weight: 600;
-  transition: background-color 0.3s linear;
 }
 .section-hero .hero .hero-text-box .margin-right-sm, .section-hero .hero .hero-text-box .btn--full {
   margin-right: 1.6rem;
@@ -188,4 +197,86 @@ html body ol, html body ul, html body ol {
   background-color: #cf711f;
 }
 
-/*# sourceMappingURL=style.css.map */
+.section-how {
+  padding: 9.6rem 0;
+}
+.section-how .container .subheading, .section-how .section-hero .hero .subheading, .section-hero .section-how .hero .subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+.section-how .container .heading-secondary, .section-how .section-hero .hero .heading-secondary, .section-hero .section-how .hero .heading-secondary {
+  color: #333;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+.section-how .grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+.section-how .grid .step-image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.section-how .grid .step-image-box .step-img {
+  width: 35%;
+}
+.section-how .grid .step-image-box::before {
+  content: "";
+  display: block;
+  width: 60%;
+  border-radius: 50%;
+  padding-bottom: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fdf2e9;
+  z-index: -2;
+}
+.section-how .grid .step-image-box::after {
+  content: "";
+  display: block;
+  width: 45%;
+  border-radius: 50%;
+  padding-bottom: 45%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fae5d3;
+  z-index: -1;
+}
+.section-how .grid .step-text-box .step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+.section-how .grid .step-text-box .heading-tertiary {
+  color: #333;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+.section-how .grid .step-text-box .step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/*# sourceMappingURL=Style.css.map */

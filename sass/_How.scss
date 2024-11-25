@@ -1,0 +1,70 @@
+.section-how {
+  padding: 9.6rem 0;
+
+  .container {
+    .subheading {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $secondary-color;
+      text-transform: uppercase;
+      margin-bottom: 1.6rem;
+      letter-spacing: 0.75px;
+    }
+
+    .heading-secondary {
+      @include heading-primary();
+      font-size: 4.4rem;
+      line-height: 1.2;
+      margin-bottom: 9.6rem;
+    }
+  }
+
+  .grid {
+    @include grid-position(9.6rem, 6.4rem);
+    align-items: center;
+    @include grid-cols(2, 1fr);
+
+    .step-image-box {
+      @include flex-position(center, center);
+      justify-content: center;
+      position: relative;
+
+      .step-img {
+        width: 35%;
+      }
+
+      &::before {
+        @include create-circle(60%,$header-background-color,60%,-2);
+      }
+      &::after {
+        @include create-circle(45%,$orange-light-color,45%,-1)
+      }
+    }
+
+    .step-text-box {
+
+      .step-number {
+        font-size: 8.6rem;
+        font-weight: 600;
+        color: $light-gray-color;
+        margin-bottom: 1.2rem;
+      }
+
+      .heading-tertiary {
+        @include heading-primary();
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 3.2rem;
+      }
+
+      .step-description {
+        font-size: 1.8rem;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  //@include grid-cols(9.6rem);
+  //background-color: $header-background-color;
+}
