@@ -41,6 +41,7 @@ Paragraph-default: 1.6
 --- 03 Shadows
 --- 04 Border-Radius
 - Default: 9px
+- Medium: 11px
 
 --- 05 WhiteSpace
 - Spacing System (px) :
@@ -300,6 +301,91 @@ html body .btn:link, html body .section-hero .hero .hero-text-box .btn--outline:
 .section-how .grid .step-text-box .step-description {
   font-size: 1.8rem;
   line-height: 1.8;
+}
+
+.section-meals {
+  padding: 9.6rem;
+}
+.section-meals .container .subheading, .section-meals .section-hero .hero .subheading, .section-hero .section-meals .hero .subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+.section-meals .container .heading-secondary, .section-meals .section-hero .hero .heading-secondary, .section-hero .section-meals .hero .heading-secondary {
+  color: #333;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+.section-meals .grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+.section-meals .grid .meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+}
+.section-meals .grid .meal .meal-img {
+  width: 100%;
+}
+.section-meals .grid .meal .meal-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+.section-meals .grid .meal .meal-content .meal-tag {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.4rem;
+}
+.section-meals .grid .meal .meal-content .meal-tag .vegan {
+  background-color: #94d82d;
+}
+.section-meals .grid .meal .meal-content .meal-tag .paleo {
+  background-color: #ffd43b;
+}
+.section-meals .grid .meal .meal-content .meal-tag .vegetarian {
+  background-color: #51cf66;
+}
+.section-meals .grid .meal .meal-content .meal-tag .tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #333;
+  border-radius: 100px;
+  font-weight: 600;
+}
+.section-meals .grid .meal .meal-content .meal-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+.section-meals .grid .meal .meal-content .meal-attributes {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.section-meals .grid .meal .meal-content .meal-attributes .meal-attribute {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: "";
+  align-items: center;
+  gap: 1.6rem;
+}
+.section-meals .grid .meal .meal-content .meal-attributes .meal-attribute .meal-icon {
+  height: 2.4rem;
+  width: 3.4rem;
+  color: #e67e22;
 }
 
 /*# sourceMappingURL=Style.css.map */

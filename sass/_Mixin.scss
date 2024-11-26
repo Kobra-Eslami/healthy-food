@@ -9,23 +9,24 @@
   font-weight: 700;
   letter-spacing: -0.5px;
 }
+
 @mixin main-grid-position($justify-content,$align-items) {
   display: grid;
   justify-content: $justify-content;
   align-items: $align-items;
 }
 
-@mixin grid-position($row-gap,$column-gap){
+@mixin grid-position($row-gap,$column-gap) {
   display: grid;
   row-gap: $row-gap; //9.6rem
   column-gap: $column-gap; //6.4rem
 }
 
-@mixin grid-cols($repeat-count,$tracks){
-  grid-template-columns: repeat($repeat-count,$tracks);
+@mixin grid-cols($repeat-count,$tracks) {
+  grid-template-columns: repeat($repeat-count, $tracks);
 }
 
-@mixin create-circle($width,$background-color,$padding-bottom,$z-index){
+@mixin create-circle($width,$background-color,$padding-bottom,$z-index) {
   content: '';
   display: block;
   width: $width;
@@ -41,4 +42,8 @@
   border-radius: 50%;
   background-color: $background-color;
   z-index: $z-index;
+}
+
+@mixin category-background-color($background-color) {
+  background-color: $background-color;
 }

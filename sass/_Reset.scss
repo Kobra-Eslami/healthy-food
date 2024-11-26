@@ -38,6 +38,7 @@ Paragraph-default: 1.6
 --- 03 Shadows
 --- 04 Border-Radius
 - Default: 9px
+- Medium: 11px
 
 --- 05 WhiteSpace
 - Spacing System (px) :
@@ -68,6 +69,10 @@ html {
     line-height: $line-height;
     font-weight: $font-weight;
     color: $main-color;
+
+    strong {
+      //font-weight: 500;
+    }
 
     a {
       text-decoration: none;
