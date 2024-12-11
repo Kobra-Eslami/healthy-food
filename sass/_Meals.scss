@@ -2,10 +2,11 @@
   padding: 9.6rem;
 
   .container {
+    text-align: center;
     .subheading {
       display: block;
       font-size: 1.6rem;
-      font-weight: 500;
+      font-weight: 600;
       color: $secondary-color;
       text-transform: uppercase;
       margin-bottom: 1.6rem;
@@ -24,11 +25,14 @@
     @include grid-position(9.6rem, 6.4rem);
     align-items: center;
     @include grid-cols(3, 1fr);
-
+    //.margin-bottom-md {
+      margin-bottom: 4.8rem !important;
+    //}
     .meal {
       box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
       border-radius: 11px;
       overflow: hidden;
+      transition: all 0.4s;
 
       .meal-img {
         width: 100%;
@@ -90,6 +94,44 @@
           }
         }
       }
+      &:hover{
+        transform: translateY(-1rem);
+        box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+      }
     }
+
+    .diets {
+      .heading-tertiary {
+        @include heading-primary();
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 3.2rem;
+        text-align: left;
+      }
+
+      .list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        .list-item {
+          font-size: 1.8rem;
+          display: flex;
+          align-items: center;
+          gap: 1.6rem;
+
+          .list-icon {
+            width: 3rem;
+            height: 3rem;
+            color: $primary-color;
+          }
+        }
+      }
+
+    }
+  }
+  .all-recipes{
+    text-align: center;
+    font-size: 1.8rem;
   }
 }

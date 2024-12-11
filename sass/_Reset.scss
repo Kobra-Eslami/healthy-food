@@ -99,6 +99,21 @@ html {
       }
     }
 
+    .link:link,
+    .link:visited {
+      display: inline-block;
+      color: $primary-color;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 2px;
+      transition: all 0.3s;
+
+      &:hover,
+      &:active {
+        color: $secondary-color;
+        border-bottom: 1px solid transparent;
+      }
+    }
+
   }
 
 }

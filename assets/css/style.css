@@ -86,6 +86,20 @@ html body .btn:link, html body .section-hero .hero .hero-text-box .btn--outline:
   font-weight: 600;
   transition: all 0.3s linear;
 }
+html body .link:link,
+html body .link:visited {
+  display: inline-block;
+  color: #e67e22;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+html body .link:link:hover, html body .link:link:active,
+html body .link:visited:hover,
+html body .link:visited:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
 
 .section-hero {
   background-color: #fdf2e9;
@@ -306,10 +320,13 @@ html body .btn:link, html body .section-hero .hero .hero-text-box .btn--outline:
 .section-meals {
   padding: 9.6rem;
 }
+.section-meals .container, .section-meals .section-hero .hero, .section-hero .section-meals .hero {
+  text-align: center;
+}
 .section-meals .container .subheading, .section-meals .section-hero .hero .subheading, .section-hero .section-meals .hero .subheading {
   display: block;
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #cf711f;
   text-transform: uppercase;
   margin-bottom: 1.6rem;
@@ -329,11 +346,13 @@ html body .btn:link, html body .section-hero .hero .hero-text-box .btn--outline:
   column-gap: 6.4rem;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 4.8rem !important;
 }
 .section-meals .grid .meal {
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   border-radius: 11px;
   overflow: hidden;
+  transition: all 0.4s;
 }
 .section-meals .grid .meal .meal-img {
   width: 100%;
@@ -386,6 +405,39 @@ html body .btn:link, html body .section-hero .hero .hero-text-box .btn--outline:
   height: 2.4rem;
   width: 3.4rem;
   color: #e67e22;
+}
+.section-meals .grid .meal:hover {
+  transform: translateY(-1rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+.section-meals .grid .diets .heading-tertiary {
+  color: #333;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+  text-align: left;
+}
+.section-meals .grid .diets .list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.section-meals .grid .diets .list .list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.section-meals .grid .diets .list .list-item .list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+.section-meals .all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
 }
 
 /*# sourceMappingURL=Style.css.map */
