@@ -83,7 +83,7 @@
 
           .meal-attribute {
             font-size: 1.8rem;
-            @include flex-position('', center);
+            @include flex-position(left,center);
             gap: 1.6rem;
 
             .meal-icon {
@@ -109,24 +109,24 @@
         text-align: left;
       }
 
-      .list {
-        display: flex;
-        flex-direction: column;
-        gap: 1.6rem;
-
-        .list-item {
-          font-size: 1.8rem;
-          display: flex;
-          align-items: center;
-          gap: 1.6rem;
-
-          .list-icon {
-            width: 3rem;
-            height: 3rem;
-            color: $primary-color;
-          }
-        }
-      }
+      //.list {
+      //  display: flex;
+      //  flex-direction: column;
+      //  gap: 1.6rem;
+      //
+      //  .list-item {
+      //    font-size: 1.8rem;
+      //    display: flex;
+      //    align-items: center;
+      //    gap: 1.6rem;
+      //
+      //    .list-icon {
+      //      width: 3rem;
+      //      height: 3rem;
+      //      color: $primary-color;
+      //    }
+      //  }
+      //}
 
     }
   }
