@@ -31,6 +31,9 @@ Paragraph-default: 1.6
 - Shades: #cf711f
 - Accents:
 - Greys:
+#888
+#767676 (lightest grey allowed on #fff)
+#6f6f6f (lightest grey allowed on #fdf2e9)
 #555
 #333
 
@@ -162,6 +165,27 @@ html {
     }
     .margin-bottom-md{
       margin-bottom: 4.8rem !important;
+    }
+
+    .logo{
+      height: 8.2rem;
+    }
+
+    .footer-link:link,
+    .footer-link:visited{
+      font-size: 1.6rem;
+      color: #767676;
+      transition: all 0.3s;
+
+      &:hover,&:active{
+        color: $main-color;
+      }
+    }
+
+    .footer-heading {
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 4rem;
     }
   }
 

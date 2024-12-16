@@ -34,6 +34,9 @@ Paragraph-default: 1.6
 - Shades: #cf711f
 - Accents:
 - Greys:
+#888
+#767676 (lightest grey allowed on #fff)
+#6f6f6f (lightest grey allowed on #fdf2e9)
 #555
 #333
 
@@ -140,6 +143,25 @@ html body .grid:not(:last-child) {
 html body .margin-bottom-md {
   margin-bottom: 4.8rem !important;
 }
+html body .logo {
+  height: 8.2rem;
+}
+html body .footer-link:link,
+html body .footer-link:visited {
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+html body .footer-link:link:hover, html body .footer-link:link:active,
+html body .footer-link:visited:hover,
+html body .footer-link:visited:active {
+  color: #555;
+}
+html body .footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
 
 .section-hero {
   background-color: #fdf2e9;
@@ -203,9 +225,6 @@ html body .margin-bottom-md {
   background-color: #fdf2e9;
   height: 9.6rem;
   padding: 0 4.8rem;
-}
-.header .logo {
-  height: 8.2rem;
 }
 .header .main-nav-list {
   display: flex;
@@ -567,6 +586,55 @@ html body .margin-bottom-md {
 .section-pricing .grid-feature .feature .feature-text {
   font-size: 1.8rem;
   line-height: 1.8;
+}
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+.footer .grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+.footer .grid .logo-col {
+  display: flex;
+  flex-direction: column;
+}
+.footer .grid .logo-col .footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+.footer .grid .logo-col .footer-logo img {
+  height: 6.2rem !important;
+}
+.footer .grid .logo-col .social-links {
+  display: flex;
+  gap: 2.4rem;
+}
+.footer .grid .logo-col .social-links li .footer-link .social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.footer .grid .logo-col .copyright {
+  font-size: 1.4rem;
+  color: #767676;
+  line-height: 1.6;
+  margin-top: auto;
+}
+.footer .grid .address-col .contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.footer .grid .address-col .contacts .address {
+  margin-bottom: 2.4rem;
+}
+.footer .grid .nav-col .footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
 }
 
 /*# sourceMappingURL=Style.css.map */
