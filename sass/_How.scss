@@ -21,7 +21,7 @@
   }
 
   .grid {
-    @include grid-position(9.6rem, 6.4rem);
+    //@include grid-position(9.6rem, 6.4rem);
     align-items: center;
     @include grid-cols(2, 1fr);
 

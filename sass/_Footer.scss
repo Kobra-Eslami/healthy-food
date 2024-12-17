@@ -3,7 +3,7 @@
   border-top: 1px solid #eee;
 
   .grid {
-    @include grid-position(9.6rem, 6.4rem);
+    //@include grid-position(9.6rem, 6.4rem);
     grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
 
     .logo-col {

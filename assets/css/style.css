@@ -77,9 +77,14 @@ html body ol, html body ul, html body ol {
   list-style: none;
 }
 html body .container, html body .section-hero .hero, .section-hero html body .hero {
+  max-width: 120rem;
   margin: 0 auto;
-  max-width: 130rem;
   padding: 0 3.2rem;
+}
+html body .grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
 }
 html body .btn:link, html body .btn--outline:link, html body .btn--full:link, html body .btn:visited, html body .btn--outline:visited, html body .btn--full:visited {
   display: inline-block;
@@ -169,8 +174,9 @@ html body .footer-heading {
 }
 .section-hero .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  max-width: 130rem;
   gap: 9.6rem;
 }
 .section-hero .hero .hero-text-box .heading-primary {
@@ -228,7 +234,7 @@ html body .footer-heading {
 }
 .header .main-nav-list {
   display: flex;
-  gap: 3.2rem;
+  gap: 4.8rem;
   align-items: center;
 }
 .header .main-nav-list li .main-nav-link:link, .header .main-nav-list li .main-nav-link:visited {
@@ -297,9 +303,6 @@ html body .footer-heading {
   margin-bottom: 9.6rem;
 }
 .section-how .grid {
-  display: grid;
-  row-gap: 9.6rem;
-  column-gap: 6.4rem;
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -358,9 +361,6 @@ html body .footer-heading {
   line-height: 1.8;
 }
 
-.section-meals {
-  padding: 9.6rem;
-}
 .section-meals .container, .section-meals .section-hero .hero, .section-hero .section-meals .hero {
   text-align: center;
 }
@@ -382,9 +382,6 @@ html body .footer-heading {
   margin-bottom: 9.6rem;
 }
 .section-meals .grid {
-  display: grid;
-  row-gap: 9.6rem;
-  column-gap: 6.4rem;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 4.8rem !important;
@@ -486,9 +483,6 @@ html body .footer-heading {
   margin-bottom: 9.6rem;
 }
 .section-pricing .grid-pricing {
-  display: grid;
-  row-gap: 9.6rem;
-  column-gap: 6.4rem;
   grid-template-columns: repeat(2, 1fr);
   width: 58%;
 }
@@ -552,9 +546,6 @@ html body .footer-heading {
   margin-top: 4.8rem;
 }
 .section-pricing .grid-details {
-  display: grid;
-  row-gap: 9.6rem;
-  column-gap: 6.4rem;
   grid-template-columns: repeat(1, 1fr);
 }
 .section-pricing .grid-details .plan-details {
@@ -563,9 +554,6 @@ html body .footer-heading {
   text-align: center;
 }
 .section-pricing .grid-feature {
-  display: grid;
-  row-gap: 9.6rem;
-  column-gap: 6.4rem;
   grid-template-columns: repeat(4, 1fr);
 }
 .section-pricing .grid-feature .feature .feature-icon {
@@ -593,9 +581,6 @@ html body .footer-heading {
   border-top: 1px solid #eee;
 }
 .footer .grid {
-  display: grid;
-  row-gap: 9.6rem;
-  column-gap: 6.4rem;
   grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
 }
 .footer .grid .logo-col {
@@ -635,6 +620,48 @@ html body .footer-heading {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+}
+
+@media (max-width: 84em) {
+  .section-hero .hero {
+    max-width: 120rem !important;
+  }
+  .section-hero .hero .hero-text-box .heading-primary {
+    font-size: 4.4rem !important;
+  }
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25% !important;
+  }
+  html .header {
+    padding: 0 3.2rem;
+  }
+  html .header .main-nav-list {
+    gap: 3.2rem;
+  }
+  html .section-pricing .grid-feature {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  html .section-pricing {
+    padding: 1rem;
+  }
+  html .section-hero .hero {
+    gap: 4.8rem;
+  }
+  html .heading-secondary {
+    font-size: 3.6rem !important;
+  }
+  html .heading-tertiary {
+    font-size: 2.4rem !important;
+  }
+  html .grid {
+    row-gap: 6.4rem !important;
+    column-gap: 4.8rem !important;
+  }
+  html .section-pricing .grid-pricing {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=Style.css.map */

@@ -16,11 +16,11 @@
   align-items: $align-items;
 }
 
-@mixin grid-position($row-gap,$column-gap) {
-  display: grid;
-  row-gap: $row-gap; //9.6rem
-  column-gap: $column-gap; //6.4rem
-}
+//@mixin grid-position($row-gap,$column-gap) {
+//  display: grid;
+//  row-gap: $row-gap; //9.6rem
+//  column-gap: $column-gap; //6.4rem
+//}
 
 @mixin grid-cols($repeat-count,$tracks) {
   grid-template-columns: repeat($repeat-count, $tracks);

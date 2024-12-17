@@ -1,0 +1,72 @@
+//85 * 16
+//bellow 1344px (smaller desktops)
+@media (max-width: 84em) {
+  .section-hero {
+    .hero {
+      max-width: 120rem !important;
+
+      .hero-text-box {
+        .heading-primary {
+          font-size: 4.4rem !important;
+        }
+      }
+    }
+  }
+
+}
+
+//1200px / 16px = 75em
+// bellow 1200px (landscape tablets)
+@media (max-width: 75em) {
+  html {
+    // 9px / 16px
+    font-size: 56.25% !important;
+
+    .header {
+      padding: 0 3.2rem;
+
+      .main-nav-list {
+        gap: 3.2rem;
+      }
+    }
+
+    .section-pricing {
+      .grid-feature {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .section-pricing {
+       padding: 1rem;
+    }
+    .section-hero {
+      .hero {
+        gap: 4.8rem;
+      }
+    }
+
+    .heading-secondary {
+      font-size: 3.6rem !important;
+    }
+
+    .heading-tertiary {
+      font-size: 2.4rem !important;
+    }
+
+    .grid {
+      row-gap: 6.4rem !important;
+      column-gap: 4.8rem !important;
+    }
+
+    .section-pricing {
+      .grid-pricing {
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+
+
+

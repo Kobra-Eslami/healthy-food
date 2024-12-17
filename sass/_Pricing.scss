@@ -21,7 +21,7 @@
   }
 
   .grid-pricing {
-    @include grid-position(9.6rem, 6.4rem);
+    //@include grid-position(9.6rem, 6.4rem);
     @include grid-cols(2, 1fr);
     width: 58%;
 
@@ -97,7 +97,7 @@
     }
   }
   .grid-details{
-    @include grid-position(9.6rem, 6.4rem);
+    //@include grid-position(9.6rem, 6.4rem);
     @include grid-cols(1, 1fr);
     .plan-details {
       font-size: 1.6rem;
@@ -108,7 +108,7 @@
 
 
   .grid-feature {
-    @include grid-position(9.6rem, 6.4rem);
+    //@include grid-position(9.6rem, 6.4rem);
     @include grid-cols(4, 1fr);
 
     .feature {
