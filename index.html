@@ -22,10 +22,10 @@
     </a>
     <nav class="main-nav">
         <ul class="main-nav-list">
-            <li><a class="main-nav-link" href="#">How it works</a></li>
-            <li><a class="main-nav-link" href="#">Meals</a></li>
+            <li><a class="main-nav-link" href="#how">How it works</a></li>
+            <li><a class="main-nav-link" href="#meals">Meals</a></li>
             <!--            <li><a class="main-nav-link" href="#">Testimonials</a></li>-->
-            <li><a class="main-nav-link" href="#">Pricing</a></li>
+            <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
             <li><a class="main-nav-link" href="#">Try for free</a></li>
         </ul>
     </nav>
@@ -82,7 +82,7 @@
     </section>
 
     <!-- how it works  -->
-    <section class="section-how ">
+    <section class="section-how " id="how">
         <div class="container">
             <span class="subheading">How it works</span>
             <h2 class="heading-secondary">
@@ -136,7 +136,7 @@
     </section>
 
     <!-- Meals -->
-    <section class="section-meals">
+    <section class="section-meals" id="meals">
         <div class="container">
             <span class="subheading">Meals</span>
             <h2 class="heading-secondary">
@@ -244,7 +244,7 @@
     </section>
 
     <!-- Pricing -->
-    <section class="section-pricing">
+    <section class="section-pricing" id="pricing">
         <div class="container">
             <span class="subheading">Pricing</span>
             <h2 class="heading-secondary">
@@ -426,15 +426,8 @@
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+<script src="assets/js/index.js"></script>
 
-<script>
-    // $(document).ready(function (){
-    const header = document.querySelector('.header');
-    const btnNav = document.querySelector('.btn-mobile-nav');
-    btnNav.addEventListener('click', function () {
-        header.classList.toggle('nav-open');
-    })
-    // })
-</script>
 </body>
 </html>

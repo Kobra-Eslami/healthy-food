@@ -68,6 +68,9 @@ large :1.8
 html {
   font-size: $font-size;
   overflow-x: hidden;
+  // does not work on safari
+  //scroll-behavior: smooth;
+
   body {
     font-family: $font-family, sans-serif;
     line-height: $line-height;
