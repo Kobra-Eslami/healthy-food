@@ -21,7 +21,6 @@
   }
 
   .grid {
-    //@include grid-position(9.6rem, 6.4rem);
     align-items: center;
     @include grid-cols(2, 1fr);
 
@@ -43,7 +42,6 @@
     }
 
     .step-text-box {
-
       .step-number {
         font-size: 8.6rem;
         font-weight: 600;
@@ -64,7 +62,4 @@
       }
     }
   }
-
-  //@include grid-cols(9.6rem);
-  //background-color: $header-background-color;
 }

@@ -5,10 +5,10 @@
   .hero {
     @extend .container;
     display: grid;
-    //grid-template-columns: 1fr 1fr;
     @include grid-cols(2,1fr);
     align-items: center;
     max-width: 130rem;
+    padding: 0 3.2rem;
     gap: 9.6rem;
 
     .hero-text-box {

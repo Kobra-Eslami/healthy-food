@@ -17,6 +17,7 @@ Default : 1
 Small: 1.05
 Medium:1.2
 Paragraph-default: 1.6
+large :1.8
 
 -Letter Spacing:
 0.5px
@@ -63,12 +64,14 @@ Paragraph-default: 1.6
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 html body {
   font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
+  overflow-x: hidden;
 }
 html body a {
   text-decoration: none;
@@ -118,6 +121,7 @@ html body .list .list-item {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 html body .list .list-item .list-icon {
   width: 3rem;
@@ -177,6 +181,7 @@ html body .footer-heading {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   max-width: 130rem;
+  padding: 0 3.2rem;
   gap: 9.6rem;
 }
 .section-hero .hero .hero-text-box .heading-primary {
@@ -231,6 +236,7 @@ html body .footer-heading {
   background-color: #fdf2e9;
   height: 9.6rem;
   padding: 0 4.8rem;
+  position: relative;
 }
 .header .main-nav-list {
   display: flex;
@@ -257,6 +263,20 @@ html body .footer-heading {
 }
 .header .main-nav-list li:last-child .main-nav-link:hover, .header .main-nav-list li:last-child .main-nav-link:active {
   background-color: #cf711f;
+}
+.header .btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+.header .btn-mobile-nav .icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+.header .btn-mobile-nav .icon-close {
+  display: none;
 }
 
 .section-featured {
@@ -624,24 +644,24 @@ html body .footer-heading {
 
 @media (max-width: 84em) {
   .section-hero .hero {
-    max-width: 120rem !important;
+    max-width: 120rem;
   }
   .section-hero .hero .hero-text-box .heading-primary {
-    font-size: 4.4rem !important;
+    font-size: 4.4rem;
+  }
+  .section-pricing .grid-pricing {
+    width: 75%;
   }
 }
 @media (max-width: 75em) {
   html {
-    font-size: 56.25% !important;
+    font-size: 56.25%;
   }
   html .header {
     padding: 0 3.2rem;
   }
   html .header .main-nav-list {
     gap: 3.2rem;
-  }
-  html .section-pricing .grid-feature {
-    grid-template-columns: repeat(2, 1fr);
   }
   html .section-pricing {
     padding: 1rem;
@@ -650,17 +670,173 @@ html body .footer-heading {
     gap: 4.8rem;
   }
   html .heading-secondary {
-    font-size: 3.6rem !important;
+    font-size: 3.6rem;
   }
   html .heading-tertiary {
-    font-size: 2.4rem !important;
+    font-size: 2.4rem;
   }
   html .grid {
-    row-gap: 6.4rem !important;
-    column-gap: 4.8rem !important;
+    row-gap: 6.4rem;
+    column-gap: 4.8rem;
+  }
+  html .section-pricing .grid-pricing {
+    width: 80%;
+  }
+}
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+  html .section-hero .hero {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 8rem !important;
+    gap: 6.4rem;
+  }
+  html .section-hero .hero .hero-text-box {
+    text-align: center;
+  }
+  html .section-hero .hero .hero-text-box .delivered-meals {
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+  html .section-hero .hero .header-image-box {
+    text-align: center;
+  }
+  html .section-hero .hero .header-image-box .header-image {
+    width: 60%;
+  }
+  html .section-featured .container .logos img, html .section-featured .section-hero .hero .logos img, .section-hero html .section-featured .hero .logos img {
+    height: 2.4rem;
+  }
+  html .section-how .grid .step-text-box .step-number {
+    font-size: 7.4rem;
+  }
+  html .section-meals .grid .meal .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
+  html .header .main-nav {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.97);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: all 0.5s ease-in;
+  }
+  html .header .main-nav .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+  html .header .main-nav .main-nav-list li .main-nav-link:link, html .header .main-nav .main-nav-list li .main-nav-link:visited {
+    font-size: 3rem;
+  }
+  html .header .btn-mobile-nav {
+    display: block;
+    z-index: 1000;
+  }
+  html .header .btn-mobile-nav .icon-close {
+    display: none;
+  }
+  html .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  html .nav-open .btn-mobile-nav .icon-close {
+    display: block;
+  }
+  html .nav-open .btn-mobile-nav .icon-menu {
+    display: none;
+  }
+}
+@media (max-width: 49em) {
+  html .section-how .container .heading-secondary, html .section-how .section-hero .hero .heading-secondary, .section-hero html .section-how .hero .heading-secondary {
+    margin-bottom: 4.8rem !important;
+  }
+  html .section-meals .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  html .section-meals .grid .diets {
+    grid-column: 1/-1;
+    justify-self: center;
   }
   html .section-pricing .grid-pricing {
     width: 100%;
+  }
+  html .section-pricing .grid-feature {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  html .footer .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  html .footer .grid .logo-col {
+    grid-column: span 3;
+  }
+  html .footer .grid .address-col {
+    grid-column: span 3;
+  }
+  html .footer .grid .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+}
+@media (max-width: 41em) {
+  html .grid {
+    row-gap: 4.8rem;
+  }
+  html .section-how .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  html .section-meals .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  html .section-pricing .grid-pricing {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  html .section-pricing .grid-feature {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  html .section-hero {
+    padding: 2.4rem 0 4.8rem 0;
+  }
+  html .section-hero .hero {
+    padding: 0 3.2rem !important;
+  }
+  html .section-hero .hero .header-image-box .header-image {
+    width: 80%;
+  }
+  html .section-featured .container .logos img, html .section-featured .section-hero .hero .logos img, .section-hero html .section-featured .hero .logos img {
+    height: 1.2rem;
+  }
+  html .section-how .container .heading-secondary, html .section-how .section-hero .hero .heading-secondary, .section-hero html .section-how .hero .heading-secondary {
+    font-size: 3.6rem;
+  }
+  html .section-how .container .step-text-box .step-number, html .section-how .section-hero .hero .step-text-box .step-number, .section-hero html .section-how .hero .step-text-box .step-number {
+    font-size: 6.2rem;
+  }
+  html .section-how .grid .step-image-box {
+    transform: translateY(24px);
+  }
+  html .section-how .grid .step-image-box:nth-child(2) {
+    grid-row: 1;
+  }
+  html .section-how .grid .step-image-box:nth-child(6) {
+    grid-row: 5;
+  }
+  html .section-meals .container .heading-secondary, html .section-meals .section-hero .hero .heading-secondary, .section-hero html .section-meals .hero .heading-secondary {
+    font-size: 3.6rem;
+  }
+  html .btn:link, html body .btn--full:link, html body .btn--outline:link, html .btn:visited, html body .btn--full:visited, html body .btn--outline:visited {
+    padding: 1.5rem 1.6rem;
   }
 }
 
